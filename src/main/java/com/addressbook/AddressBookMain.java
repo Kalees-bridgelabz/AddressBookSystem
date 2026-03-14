@@ -8,14 +8,14 @@ public class AddressBookMain {
         Scanner scanner = new Scanner(System.in);
         AddressBook addressBook = new AddressBook();
 
-        // Add a sample contact
-        Contact contact = new Contact("Kalees", "E", "123 Main St", "Chennai", "TN", "600001", "9999999999", "kalees@test.com");
-        addressBook.addContact(contact);
+        // Add sample contacts
+        addressBook.addContact(new Contact("Kalees", "E", "123 Main St", "Chennai", "TN", "600001", "9999999999", "kalees@test.com"));
+        addressBook.addContact(new Contact("Ravi", "K", "456 Park Ave", "Bangalore", "KA", "560001", "8888888888", "ravi@test.com"));
 
-        // Edit contact
-        System.out.print("Enter First Name to Edit: ");
-        String editName = scanner.nextLine();
-        addressBook.editContact(editName);
+        // Delete contact
+        System.out.print("Enter First Name to Delete: ");
+        String deleteName = scanner.nextLine();
+        addressBook.deleteContact(deleteName);
         addressBook.displayAllContacts();
 
         scanner.close();
